@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <title>TableTopRpg</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <table class="table">
+                <tr>
+                    <th>Ability</th>
+                    <th>Score</th>
+                    <th>Mod</th>
+                </tr>
+                <tr>
+                    <td>Strength</td>
+                    <td><input type="number" value="10" id="strScore" onchange="updateModifiers()"></td>
+                    <td><input type="number" placeholder="0" id="strMod"></td>
+                </tr>
+                <tr>
+                    <td>Dexterity</td>
+                    <td><input type="number" value="10" id="dexScore" onchange="updateModifiers()"></td>
+                    <td><input type="number" placeholder="0" id="dexMod"></td>
+                </tr>
+                <tr>
+                    <td>Constitution</td>
+                    <td><input type="number" value="10" id="conScore" onchange="updateModifiers()"></td>
+                    <td><input type="number" placeholder="0" id="conMod"></td>
+                </tr>
+                <tr>
+                    <td>Intelligence</td>
+                    <td><input type="number" value="10" id="intScore" onchange="updateModifiers()"></td>
+                    <td><input type="number" placeholder="0" id="intMod"></td>
+                </tr>
+                <tr>
+                    <td>Wisdom</td>
+                    <td><input type="number" value="10" id="wisScore" onchange="updateModifiers()"></td>
+                    <td><input type="number" placeholder="0" id="wisMod"></td>
+                </tr>
+                <tr>
+                    <td>Charisma</td>
+                    <td><input type="number" value="10" id="chaScore" onchange="updateModifiers()"></td>
+                    <td><input type="number" placeholder="0" id="chaMod"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+
+                <h2>Player Level</h2>
+
+                <br>
+
+                <input type="number" id="playerLevel" min="1" max="20" value="1" onchange="playerLevelChange();">
+
+            </div>
+
+            <div class="col-4">
+
+                <h2>Proficiency Bonus</h2>
+
+                <br>
+
+                <input type="number" id="profBonus">
+
+            </div>
+            <div class="col-4">
+
+                <h2>Player Name</h2>
+
+                <br>
+
+                <input name="player_name" maxlength="20">
+
+            </div>
+            <div>
+                <h2>Your Dice</h2>
+                <img src="images/d1.png" id="mydice1">
+                <img src="images/d1.png" id="mydice2"><br>
+                <h2>Enemy"s Dice</h2>
+                <img src="images/e1.png" id="hisdice1">
+                <img src="images/e1.png" id="hisdice2">
+                <div id="enemy_score"></div><br>
+
+                <button class="greenBut" onClick="throwdice()">Roll Dice</button>
+                <form id="myform">
+
+                </form>
+
+            </div>
+            <script type="text/javascript" src="dice.js"></script>
+</body>
+
+</html>
